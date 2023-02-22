@@ -8,7 +8,8 @@
                 <a href="https://www.facebook.com/rocio.camila.12/"><img src="../../../assets/facebook.png" id="facebook"></a>
                 <a href="https://www.instagram.com/rochi_malik/"><img src="../../../assets/instagram.png" id="instagram"></a>
                 <a href="https://github.com/rocci2434?tab=repositories"><img src="../../../assets/github.png" id="github"></a>
-                <button type="button" class="btn btn-outline-light" (click)="login()">INGRESO</button>
+                <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+                <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
             </div>
         </div>
     </div>
